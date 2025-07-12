@@ -1,4 +1,4 @@
-var sign = document.getElementById("signup");
+var signupbtn = document.getElementById("signup");
 var signbox = document.getElementById("signup-box");
 var hover = document.querySelector(".signup-box span"); 
 const Form = document.querySelector("#emailForm");
@@ -9,7 +9,7 @@ var scrollright = document.querySelector(".scroll-right-button")
 
 
 //signup box
-sign.addEventListener("click",function(){
+signupbtn.addEventListener("click",function(){
     gsap.to(signbox, { 
         scale:1,
         duration:.5,
@@ -18,7 +18,7 @@ sign.addEventListener("click",function(){
     })   
     document.innerhtml = signbox.style.display = "block";
 });
-sign.addEventListener("dblclick", function(){
+signupbtn.addEventListener("dblclick", function(){
     gsap.to(signbox, {
         scale:0,
         duration:.5,
@@ -28,6 +28,12 @@ sign.addEventListener("dblclick", function(){
     })  
     document.innerhtml = signbox.style.display = "none";
 });
+window.addEventListener('click', (e) => {
+  if (e.target === signbox) {
+    signbox.style.display = 'none';
+  }
+});
+
 //signup box
 const form = document.querySelector("form")
 const firstname = document.querySelector("#firstname")
