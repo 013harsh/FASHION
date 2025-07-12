@@ -1,11 +1,13 @@
 var signupbtn = document.getElementById("signup");
-var signbox = document.getElementById("signup-box");
+var signbox = document.getElementById("createaccount");
+// var sign = document.getElementById("signup-box");
 var hover = document.querySelector(".signup-box span"); 
 const Form = document.querySelector("#emailForm");
 const emailInput = document.querySelector("#eemail")
 var slider =document.querySelector(".image")
 var scrollleft = document.querySelector(".scroll-left-button")
 var scrollright = document.querySelector(".scroll-right-button")
+var closebtn = document.getElementById("close_btn")
 
 
 //signup box
@@ -17,8 +19,9 @@ signupbtn.addEventListener("click",function(){
         ease:"power2.out", 
     })   
     document.innerhtml = signbox.style.display = "block";
+    console.log("dfvdv")
 });
-signupbtn.addEventListener("dblclick", function(){
+closebtn.addEventListener("click", function(){
     gsap.to(signbox, {
         scale:0,
         duration:.5,
@@ -27,6 +30,7 @@ signupbtn.addEventListener("dblclick", function(){
         display:"none"
     })  
     document.innerhtml = signbox.style.display = "none";
+     console.log("dfvdv")
 });
 window.addEventListener('click', (e) => {
   if (e.target === signbox) {

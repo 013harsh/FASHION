@@ -29,7 +29,7 @@
         padding: 2.5% 100px 2.5%;
         /* top:5%; */
         position:fixed;
-        z-index: 9;
+        z-index: 3;
         background: linear-gradient(135deg,  rgba(132, 130, 130, 0.952));
         
     }
@@ -129,19 +129,27 @@
         position: absolute;
         background-color: gold
     }
-    
 
-
-
-
-    .signup-box {
+    .createaccount{
+        height: 100vh;
+        width: 100%;
+        background: linear-gradient(143deg, grey,black);
+        position: absolute ;
+        top: 0;
         display: none;
-        z-index: 9;
+        z-index: 8; 
+    }
+    #close_btn{
+        background-color: #040101;
+        margin-left:100%;
+        
+    }
+    .signup-box {
         max-width: 350px;
-        padding: 40px;
+        padding: 25px 40px 40px 40px;
         border-radius: 15px;
-        background-color: #b1afaf;
-        position: fixed;        
+        background-color: #b1afaf94;
+        position: relative;           
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%); 
