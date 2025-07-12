@@ -32,11 +32,11 @@ closebtn.addEventListener("click", function(){
     document.innerhtml = signbox.style.display = "none";
      console.log("dfvdv")
 });
-window.addEventListener('click', (e) => {
-  if (e.target === signbox) {
-    signbox.style.display = 'none';
-  }
-});
+// window.addEventListener('click', (e) => {
+//   if (e.target === signbox) {
+//     signbox.style.display = 'none';
+//   }
+// });
 
 //signup box
 const form = document.querySelector("form")
