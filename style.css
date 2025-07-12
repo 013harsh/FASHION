@@ -27,11 +27,12 @@
         justify-content:space-between;
         padding: 2.5% 100px 2.5%;
         /* top:5%; */
-        position: absolute;
+        position:fixed;
         z-index: 9;
-        background: linear-gradient(135deg,  rgba(128, 128, 128, 0.658), rgba(0, 0, 0, 0.678));
+        background: linear-gradient(135deg,  rgba(132, 130, 130, 0.952));
+        
     }
-
+    
     .logo{
         font-weight: 900;
         font-size: 20px;
@@ -39,7 +40,7 @@
         background-image: url(photos/Vector.png);   
         background-repeat: no-repeat;
         background-size: 26px;
-
+        
     }
     
     #search{
@@ -50,9 +51,10 @@
         font-size: medium;
         /* text-align:; */
     }
-
-
+    
+    
     .text ul{   
+        color: white;   
         font-weight: 700;  
         list-style: none;
         display:flex;
@@ -283,7 +285,7 @@
         height: 94vh;
         background-color: #f7dc53e4;
         width: 100%;
-        background-image:url(photos/ali.png);
+         background-image:url(photos/ali.png);
         background-position: left;
         background-repeat: no-repeat;
         background-size: 40%;
