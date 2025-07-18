@@ -1,42 +1,44 @@
 var signupbtn = document.getElementById("signup");
+var closebtn = document.getElementById("close_btn")
 var signbox = document.getElementById("createaccount");
-// var sign = document.getElementById("signup-box");
-var hover = document.querySelector(".signup-box span"); 
+var Login= document.getElementById("Login");
+var signnup= document.getElementById("sign-up");
+var signupbox = document.getElementById("signup-box");
+var signinbox = document.getElementById("signin-box");
 const Form = document.querySelector("#emailForm");
 const emailInput = document.querySelector("#eemail")
 var slider =document.querySelector(".image")
 var scrollleft = document.querySelector(".scroll-left-button")
 var scrollright = document.querySelector(".scroll-right-button")
-var closebtn = document.getElementById("close_btn")
 
 
 //signup box
 signupbtn.addEventListener("click",function(){
     gsap.to(signbox, { 
-        scale:1,
-        duration:.5,
-        delay:0.1,
-        ease:"power2.out", 
+        x:-600, scale:1, duration:.9, delay:0.3,
+        ease:"power2.inout", display: "block"
     })   
-    document.innerhtml = signbox.style.display = "block";
-    console.log("dfvdv")
 });
 closebtn.addEventListener("click", function(){
     gsap.to(signbox, {
-        scale:0,
-        duration:.5,
-        delay:0.1,
-        ease:"power4.out" ,
-        display:"none"
+        x:600, scale:1, duration:2, delay:0.3, ease:"power2.inout" , display:"none"
     })  
-    document.innerhtml = signbox.style.display = "none";
-     console.log("dfvdv")
 });
-// window.addEventListener('click', (e) => {
-//   if (e.target === signbox) {
-//     signbox.style.display = 'none';
-//   }
-// });
+Login.addEventListener("click",() =>{
+    signupbox.style.display = "none";    
+    signinbox.style.display = "block";
+});
+signnup.addEventListener("click",() =>{
+    signupbox.style.display= "block";
+    signinbox.style.display = "none";
+})
+
+
+window.addEventListener('click', (e) => {
+  if (e.target === signbox) {
+    signbox.style.display = 'none';
+  }
+});
 
 //signup box
 const form = document.querySelector("form")
@@ -48,11 +50,9 @@ const spassword = document.querySelector("#spassword")
 const error_message = document.querySelector("#error_message")
 form.addEventListener("submit", (e) => {
 
-
     let errors =[]
 
     if(firstname){
-
         errors = getSignupFormErrors(firstname.value , lastname.value, email.value, password.value, spassword.value)
     }
     else{
