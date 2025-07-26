@@ -1,6 +1,6 @@
 # 👗 FASHION
 
-Welcome to the **Fashion Website Project** – a stylish and responsive web template built using:
+Welcome to the **Fashion Website Project** – a stylish and web template built using:
 
 ## 🧠 Tech Stack
 
