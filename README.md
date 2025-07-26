@@ -20,9 +20,13 @@ Welcome to the **Fashion Website Project** – a stylish and web template built 
 ## 📂 Project Structure
 📁 FASHION
 ┣ 📁 photos
+
 ┣ 📜 index.html
+
 ┣ 📜 style.css
+
 ┣ 📜 script.js
+
 ┣ 📜 README.md
 
 
