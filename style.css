@@ -19,9 +19,6 @@ a {
   color: #000000;
 }
 
-.herosection {
-  height: 100vh;
-}
 .container {
   height: 40px;
   width: 100%;
@@ -73,15 +70,16 @@ a {
   background: #000000;
 }
 
-.main {
-  width: 1272px;
-  height: 70vh;
-  top: 20%;
-  left: 5.5%;
-  border-radius: 8px;
+.main{
+  width: 100%;
+  min-height: 100vh;
+  top: 0;
+  left:0;
+  /* left: 5.5%; */
+  /* border-radius: 8px; */
   background-color: #d2d1d1;
-  position: absolute;
-  box-shadow: 2.5px 2.5px 5px black;
+  position: relative;
+  /* box-shadow: 2.5px 2.5px 5px black; */
 }
 .main h1 {
   width: 270px;
@@ -197,9 +195,6 @@ a {
 .signup-box h5 {
   font-size: 13 px;
   color: rgb(243, 242, 240);
-}
-.signup-box a {
-  color: ;
 }
 .signup-box section {
   display: flex;
