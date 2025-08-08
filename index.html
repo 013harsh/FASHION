@@ -12,10 +12,13 @@
     <div class="herosection" id="herosection">
         <div class="container">
             <div class="logo"><a href="#herosection">FASHION</a></div>
+
             <div class="search">
-                <label for="search"></label>
-                <input type="search" placeholder="search" name="search" id="search">
+                <label for="text"></label>
+                <input type="text" placeholder="search" id="search">
+                <button>submit</button>
             </div>
+
             <div class="text">
                 <ul>
                     <li><a href="#arrivals">FASHION </a></li>
@@ -23,83 +26,75 @@
                     <li><a href="#downloadapp">Download</a></li>
                     <li><a href="">Cart </a></li>
                     <button>
-                        <li id="signup">SIGN UP</li>
+                        <li id="signup">Login</li>
                     </button>
                 </ul>
             </div>
         </div>
     </div>
 
-
-        <div class="main">
-            <div class="mainr">
-                <h1>LET’S EXPLORE UNIQUE CLOTHES.</h1>
-                <h3>Live for Influential and Innovative fashion!</h3>
-                <a href="#">
-                    <h4>SHOP NOW</h4>
-                </a>
-                <p></p>
-                <div class="box"></div>
-            </div>
+    <div class="main">
+        <div class="mainr">
+            <h1>LET’S EXPLORE UNIQUE CLOTHES.</h1>
+            <h3>Live for Influential and Innovative fashion!</h3>
+            <a href="#">
+                <h4>SHOP NOW</h4>
+            </a>
+            <p></p>
+            <div class="box"></div>
         </div>
-
-
-
-
-
-
+    </div>
 
     <section id="createaccount" class="createaccount">
-
         <nav id="close_btn"><img src="https://img.icons8.com/?size=96&id=pfF6HpODcjW0&format=png" /> </nav>
 
         <div class="signup-box" id="signup-box">
 
             <h2>Create an account </h2>
-            <p id="error_message"> </p>
             <h5>Already have an account? <a id="Login">Login here.</a></h5>
 
-            <form action="#" id="form">
-
+            <form action="#" id="form-signup">
                 <div class="incorrect">
                     <section>
                         <label for="firstname"></label>
                         <input type="text" placeholder="first name" id="firstname">
-
                         <label for="lastname"></label>
                         <input type="text" placeholder="last name" id="lastname">
                     </section>
                     <label for="email"></label>
-                    <input type="email" placeholder="Email" id="email" autocomplete="email">
+                    <input type="email" placeholder="Email" id="email-signup" autocomplete="email">
 
                     <label for="password"></label>
-                    <input type="password" placeholder="Password" id="password">
+                    <input type="password" placeholder="Password" id="password-signup">
 
-                    <label for="spassword"></lel>
-                        <input type="password" placeholder="confirm password" id="spassword">
+                    <label for="password"></label>
+                    <input type="password" placeholder="confirm password" id="spassword-signup">
 
-                        <button type="submit">Sign Up</button>
+                    <button type="submit">Sign Up</button>
                 </div>
+
+                <div class="error_message"></div>
             </form>
+
         </div>
 
         <div class="signin-box" id="signin-box">
 
             <h2>Login account</h2>
-            <p id="error_message"> </p>
-            <h5>you have no account?  <a id="sign-up">signup here.</a> </h5>
-
-            <form action="#" id="form">
+            <h5>you have no account? <a id="sign-up">signup here.</a> </h5>
+            
+            <form action="#" id="form-signin">
                 <div class="incorrect">
-
+                    
                     <label for="emial"></label>
-                    <input type="email" placeholder="email" id="email">
-
+                    <input type="email" placeholder="email" id="email-signin">
+                    
                     <label for="password"></label>
-                    <input type="password" placeholder="Password" id="password">
-
+                    <input type="password" placeholder="Password" id="password-signin">
+                    
                     <button type="submit">Sign in</button>
                 </div>
+                <div class="error_message"> </div>  
             </form>
         </div>
 
@@ -228,6 +223,7 @@
         <div class="box1"></div>
     </div>
 
+
     <!-- <div class="collage">
         <div class="text3">Young’s Favourite</div>
         <div class="collage-image">
@@ -243,8 +239,6 @@
                 <h6><a href="#">Explore Now!</a></h6> 
             </div> 
         </div></div></div> -->
-
-        
 
 
     <div class="downloadapp" id="downloadapp">
@@ -271,7 +265,7 @@
 
             <form id="emialForm">
 
-                <input type="email" id="eemail" name="email" placeholder="Add Email Id" autocomplete="email">
+                <input type="email" id="eeemail" name="email" placeholder="Add Email Id" autocomplete="email">
 
                 <button id="saveemail" type="submit">submit </button>
 

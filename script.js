@@ -48,67 +48,64 @@ window.addEventListener("click", (e) => {
 });
 
 //signup box
-const form = document.querySelector("form");
-const firstname = document.querySelector("#firstname");
-const lastname = document.querySelector("#lastname");
-const email = document.querySelector("#email");
-const password = document.querySelector("#password");
-const spassword = document.querySelector("#spassword");
-const error_message = document.querySelector("#error_message");
-form.addEventListener("submit", (e) => {
-  let errors = [];
 
-  if (firstname) {
-    errors = getSignupFormErrors(
-      firstname.value,
-      lastname.value,
-      email.value,
-      password.value,
-      spassword.value
-    );
-  } else {
-    errors = getSigninFormErrors(email.value, password.value);
-  }
-  if (errors.length > 0) {
-    e.preventDefault();
-    error_message.innerText = errors.join(".  ");
-  }
-});
-function getSignupFormErrors(firstname, lastname, email, password, spassword) {
-  let errors = [];
-  if (firstname === "" || firstname == null) {
-    errors.push("firstname is requried");
-    firstname.parentElement.add(".incorrect");
-  }
-  if (email === "" || email == null) {
-    errors.push("firstname is requried");
-    email.parentElement.add(".incorrect");
-  }
-  if (password === "" || password == null) {
-    errors.push("firstname is requried");
-    password.parentElement.add(".incorrect");
-  }
-  if (password.length < 8) {
-    errors.push("password must be at least 8 characters ");
-    password.parentElement.add(".incorrect");
-  }
-  if (password !== spassword) {
-    errors.push("passwords  do not match");
-    spassword.parentElement.add(".incorrect");
-    password.parentElement.add(".incorrect");
-    spassword.parentElement.add(".incorrect");
-  }
-  return errors;
-}
-const allInputs = [firstname, lastname, email, password, spassword];
-allInputs.forEach((input) => {
-  input.addEventListener("input", () => {
-    if (input.parentElement.classList.contains("incorrect")) {
-      input.parentElement.classList.remove("incorrect");
-      error_message.innerText = " ";
-    }
-  });
-});
+// form.addEventListener("submit", (e) => {
+
+//   let errors = [];
+
+//   if (firstname) {
+//     errors = getSignupFormErrors(
+//       firstname.value,
+//       lastname.value,
+//       email.value,
+//       password.value,
+//       spassword.value
+//     );
+//   } else {
+//     errors = getSignupFormErrors(email.value, password.value);
+//   }
+
+//   if (errors.length > 0) {
+//     e.preventDefault();
+//     error_message.innerText = errors.join(".  ");
+//   }
+
+// });
+// function getSignupFormErrors(firstname, lastname, email, password, spassword) {
+//   let errors = [];
+//   if (firstname === "" || firstname == null) {
+//     errors.push("firstname is requried");
+//     firstname.parentElement.add(".incorrect");
+//   }
+//   if (email === "" || email == null) {
+//     errors.push("firstname is requried");
+//     email.parentElement.add(".incorrect");
+//   }
+//   if (password === "" || password == null) {
+//     errors.push("firstname is requried");
+//     password.parentElement.add(".incorrect");
+//   }
+//   if (password.length < 8) {
+//     errors.push("password must be at least 8 characters ");
+//     password.parentElement.add(".incorrect");
+//   }
+//   if (password !== spassword) {
+//     errors.push("passwords  do not match");
+//     spassword.parentElement.add(".incorrect");
+//     password.parentElement.add(".incorrect");
+//     spassword.parentElement.add(".incorrect");
+//   }
+//   return errors;
+// }
+// const allInputs = [firstname, lastname, email, password, spassword];
+// allInputs.forEach((input) => {
+//   input.addEventListener("input", () => {
+//     if (input.parentElement.classList.contains("incorrect")) {
+//       input.parentElement.classList.remove("incorrect");
+//       error_message.innerText = " ";
+//     }
+//   });
+// });
 
 // animation
 gsap.from(".main h1", {
@@ -184,3 +181,72 @@ saveemailbtm.addEventListener("click", () => {
   }
 });
 
+// search bar
+
+const arr = [];
+var searchbar = document.querySelector(".search");
+//search
+
+searchbar.addEventListener("click", () => {
+  console.log("haesh");
+});
+
+function search(query) {
+  return;
+}
+
+//form validation
+const formsignup = document.getElementById("form-signup");
+const emailsignup = document.getElementById("email-signup");
+const passwordsignup = document.getElementById("password-signup");
+const spasswordsignup = document.getElementById("spassword-signup");
+const formsignin = document.getElementById("form-signin");
+const emailsignin = document.getElementById("email-signin");
+const passwordsignin = document.getElementById("password-signin");
+const signuperrormessage = document.querySelector(
+  "#form-signup .error_message"
+);
+const signinerrormessage = document.querySelector(
+  "#form-signin .error_message"
+);
+
+formsignin.addEventListener("submit", (e) => {
+  e.preventDefault();
+
+  const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+  const passwordRegex =
+    /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?#&])[A-Za-z\d@$!%*?#&]{8,}$/;
+
+  let emailans = emailRegex.test(emailsignin.value.trim());
+  let passwordans = passwordRegex.test(passwordsignin.value.trim());
+  let passwordVal = passwordsignin.value.trim();
+  if (!emailans) {
+    signinerrormessage.innerHTML = "Enter valid Email";
+  } else if (!passwordans) {
+    signinerrormessage.innerHTML = "Enter Valid Password";
+  } else {
+    signinerrormessage.innerHTML = "Sucess";
+    console.log("sucess");
+  }
+});
+
+formsignup.addEventListener("submit", (e) => {
+  e.preventDefault();
+  const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+  const passwordRegex =
+    /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?#&])[A-Za-z\d@$!%*?#&]{8,}$/;
+  let emailans = emailRegex.test(emailsignup.value.trim());
+  let passwordans = passwordRegex.test(passwordsignup.value.trim());
+  let passwordVal = passwordsignup.value.trim();
+  let spasswordVal = spasswordsignup.value.trim();
+  if (!emailans) {
+    signuperrormessage.innerHTML = "Enter Valid Email";
+  } else if (!passwordans) {
+    signuperrormessage.innerHTML = "Enter Valid Password";
+  } else if (passwordVal !== spasswordVal) {
+    signuperrormessage.innerHTML = "Password donot Match";
+  } else {
+    signuperrormessage.innerHTML = "Sucess";
+    console.log("sucess");
+  }
+});
