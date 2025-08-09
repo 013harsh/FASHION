@@ -5,6 +5,7 @@
   margin: 0;
   box-sizing: border-box;
 }
+
 html,
 body {
   width: 100%;
@@ -14,6 +15,7 @@ body {
   cursor: pointer;
   scroll-behavior: smooth;
 }
+
 a {
   text-decoration: none;
   color: #000000;
@@ -28,12 +30,11 @@ a {
   padding: 2.5% 100px 2.5%;
   position: fixed;
   z-index: 3;
-  background: linear-gradient(
-    100deg,
-    rgba(132, 130, 130, 0.952),
-    rgb(161, 161, 161)
-  );
+  background: linear-gradient(100deg,
+      rgba(132, 130, 130, 0.952),
+      rgb(161, 161, 161));
 }
+
 .logo {
   font-weight: 900;
   font-size: 20px;
@@ -42,14 +43,17 @@ a {
   background-repeat: no-repeat;
   background-size: 26px;
 }
-.search{
+
+.search {
   display: flex;
 }
-.search button{
-   border-radius: 10px;
-   width: 60px;
-   height: 30px;
+
+.search button {
+  border-radius: 10px;
+  width: 60px;
+  height: 30px;
 }
+
 #search {
   height: 30px;
   width: 120%;
@@ -68,6 +72,7 @@ a {
   justify-content: space-between;
   gap: 30px;
 }
+
 #signup {
   padding: 6px;
   border-radius: 4px;
@@ -76,21 +81,22 @@ a {
   background: #000000;
 }
 
-.main{
+.main {
   width: 100%;
   height: 100vh;
   position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
-  }
-.mainr{
-    width: 93%;
-    height: 70vh;
-    background-color: #A1AEB1;
-    position: absolute;
-    border-radius: 6px;
-  }
+}
+
+.mainr {
+  width: 93%;
+  height: 70vh;
+  background-color: #A1AEB1;
+  position: absolute;
+  border-radius: 6px;
+}
 
 .mainr h1 {
   width: 270px;
@@ -105,12 +111,14 @@ a {
   z-index: 1;
   line-height: 1.2;
 }
+
 .mainr h3 {
   position: absolute;
   bottom: 0px;
   margin-bottom: 10%;
   margin-left: 10%;
 }
+
 .mainr h4 {
   position: absolute;
   bottom: 0px;
@@ -121,6 +129,7 @@ a {
   border-radius: 7px;
   background-color: black;
 }
+
 .mainr p {
   width: 100%;
   height: 100%;
@@ -130,11 +139,12 @@ a {
   background-repeat: no-repeat;
   background-size: 60%;
 }
+
 .mainr .box {
   width: 250px;
   height: 60px;
   rotate: -2deg;
-  margin:  14.5% 10%;
+  margin: 14.5% 10%;
   position: absolute;
   background-color: gold;
 }
@@ -144,37 +154,40 @@ a {
   top: 0;
   height: 100vh;
   width: 30%;
-  background: linear-gradient(
-    100deg,
-    rgba(132, 130, 130, 0.952),
-    rgb(161, 161, 161)
-  );  position: fixed;
+  background: linear-gradient(100deg,
+      rgba(132, 130, 130, 0.952),
+      rgb(161, 161, 161));
+  position: fixed;
   margin-right: -600px;
   display: none;
   z-index: 3;
 }
+
 #close_btn img {
   height: 40px;
   width: 40px;
   margin: 20px 0px -20px 20px;
 }
+
 .signup-box {
   box-shadow: 2.5px 2.5px 5px 2px rgba(17, 17, 17, 0.795);
   width: 80%;
   max-width: 350px;
   padding: 25px 40px 40px 40px;
   border-radius: 5px;
- background: #A1AEB1;
+  background: #A1AEB1;
   position: relative;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   display: none;
 }
+
 .signup-box h2 {
   text-align: center;
   margin-bottom: 20px;
 }
+
 .signup-box input[type="text"],
 .signup-box input[type="text1"],
 .signup-box input[type="email"],
@@ -189,12 +202,15 @@ a {
   border-radius: 4px;
   box-shadow: 1px 1px 4px 2px rgb(96, 96, 96);
 }
+
 .signup-box input[type="text"] {
   width: 50%;
 }
+
 .signup-box input[type="text1"] {
   width: 50%;
 }
+
 .signup-box button {
   width: 100%;
   padding: 10px;
@@ -204,19 +220,24 @@ a {
   font-size: 16px;
   border-radius: 4px;
 }
+
 .signup-box h5 {
   font-size: 13 px;
   color: rgb(243, 242, 240);
 }
+
 .signup-box section {
   display: flex;
   gap: 3px;
-}.error_message {
+}
+
+.error_message {
   margin-top: 8px;
   color: red;
   font-size: 13px;
-  font-weight: 300;  
+  font-weight: 300;
 }
+
 .signin-box {
   position: absolute;
   /* display: none; */
@@ -225,13 +246,14 @@ a {
   width: 80%;
   max-width: 350px;
   border-radius: 5px;
-  background: #A1AEB1; 
+  background: #A1AEB1;
   padding: 25px 40px 40px 40px;
   transform: translate(-50%, -50%);
   box-shadow: 2.5px 2.5px 5px 2px rgba(17, 17, 17, 0.795);
   line-height: 2;
 }
-.signin-box button{
+
+.signin-box button {
   width: 100%;
   padding: 10px;
   background: #000000;
@@ -240,7 +262,8 @@ a {
   font-size: 16px;
   border-radius: 4px;
 }
-.signin-box a{
+
+.signin-box a {
   color: #fff;
 }
 
@@ -256,10 +279,12 @@ a {
   background-color: gold;
   z-index: -1;
 }
+
 .mainend .blend-img {
   max-width: 1200px;
   mix-blend-mode: multiply;
 }
+
 .arrivals {
   height: 100vh;
   width: 100%;
@@ -271,17 +296,20 @@ a {
   margin: 40px 70px;
   padding: 30px;
 }
+
 .slider {
   display: flex;
   justify-content: space-evenly;
   align-items: center;
 }
+
 .slider button {
   /* background-color: #4CAF50; */
   width: 40px;
   height: 40px;
   object-fit: cover;
 }
+
 .image {
   width: 1100px;
   display: flex;
@@ -294,9 +322,11 @@ a {
   padding: 50px;
   scroll-behavior: smooth;
 }
+
 .image::-webkit-scrollbar {
   display: none;
 }
+
 /* .imgx:hover{
         transition: transform 0.3s ease; 
         transform: scale(1) translateY(1px);
@@ -310,22 +340,27 @@ a {
   height: 400px;
   min-width: 270px;
 }
+
 .imgx:hover img {
   transition: transform 0.4s ease-in-out;
   transform: scale(1.1) translateY(-15px);
   box-shadow: 1px 2px 8px 1px rgb(62, 62, 62);
 }
+
 .text0 {
   margin-left: 3px;
 }
+
 .imgx img {
   max-height: 340px;
   min-width: 270px;
   border-radius: 0px;
 }
+
 .image h6 {
   color: grey;
 }
+
 .payday {
   height: 94vh;
   background-color: #f7dc53e4;
@@ -339,6 +374,7 @@ a {
   /* background-color:#000000; */
   /* border-radius: 2%;        */
 }
+
 .payday h1 {
   position: relative;
   z-index: 2;
@@ -348,17 +384,20 @@ a {
   height: 250px;
   rotate: -1deg;
 }
+
 .payday p {
   width: 360px;
   height: 80px;
   font-weight: 500;
 }
+
 .button {
   padding: 8px;
   border-radius: 4px;
   background-color: #040101;
   color: white;
 }
+
 .box1 {
   background-color: white;
   max-width: 400px;
@@ -375,6 +414,7 @@ a {
   height: 80vh;
   position: relative;
 }
+
 .downloadapp h3 {
   top: 200px;
   left: 230px;
@@ -383,6 +423,7 @@ a {
   font-size: 30px;
   font-weight: 800;
 }
+
 .downloadapp p {
   top: 320px;
   left: 230px;
@@ -390,6 +431,7 @@ a {
   font-size: 15px;
   position: absolute;
 }
+
 .store {
   bottom: 0%;
   margin-bottom: 10%;
@@ -399,10 +441,12 @@ a {
   align-items: center;
   justify-content: center;
 }
+
 .store img {
   width: 150px;
   height: 50px;
 }
+
 .phoneimage {
   height: 100%;
   width: 100%;
@@ -422,9 +466,11 @@ a {
   background-color: #f7db53;
   text-align: center;
 }
+
 .text5 {
   width: 35%;
 }
+
 .description h3 {
   font-size: 30px;
   font-weight: 800;
@@ -438,6 +484,7 @@ a {
   /* margin-right: -67px; */
   border-radius: 10px;
 }
+
 .description button {
   width: 55px;
   height: 30px;
@@ -455,25 +502,30 @@ a {
   justify-content: space-evenly;
   align-items: center;
 }
+
 .bottomtext {
   width: 20%;
   padding-top: 0px;
 }
+
 .logo0 {
   width: 100%;
   display: flex;
   gap: 20px;
 }
+
 .bottomtext1 {
   width: 40%;
   display: flex;
   justify-content: space-between;
 }
+
 nav ul {
   list-style: none;
   line-height: 2;
   gap: 90px;
 }
+
 .logo0 img {
   width: 40px;
   margin-top: 25px;
@@ -482,9 +534,71 @@ nav ul {
   padding: 6px;
   border-radius: 5px;
 }
+
 nav li {
   color: #b1afaf;
 }
+
 .ctext {
   color: white;
+}
+
+@media (max-width: 500px) {
+  .container {
+    padding: 1.5% 40px 1.5%;
+    height: 60px;
+  }
+
+  .text ul {
+    display: none;
+  }
+
+  #search {
+    display: none;
+  }
+
+  .search button {
+    display: none;
+  }
+  .mainr p {
+    background-position: bottom center;
+    background-size: 100%;
+}
+.mainr h1 {
+    width: 65%;
+    height: 0px;
+    margin: 10% 10%;
+    font-size: 30px;
+    line-height: 1.1;
+}
+.mainr .box {
+   display: none;
+}
+.mainr h3 {
+    top: 0px;
+    margin-top: 28%;
+    margin-left: 15%;
+    font-size: 15px;
+}
+.mainr h4 {
+ display: none;
+}
+.text2 {
+    margin: 0px;
+    padding-left: 15%;
+}
+.slider {
+    padding: 0px 30px;
+}
+.imgx  {
+    min-width: 330px;
+    height: 450px;
+}
+.imgx img  {
+    min-width: 330px;
+    max-height: 370px;
+}
+
+
+
 }

@@ -162,8 +162,7 @@ var right = scrollright.addEventListener("click", () => {
 
 var emailinput = document.getElementById("eemail");
 var saveemailbtm = document.getElementById("saveemail");
-var emaildisply = document.getElementById("saveemaildisplay");
-
+var emaildisply = document.getElementById("saveemaildisplay")
 const savedEmail = localStorage.getItem("userEmail");
 if (savedEmail) {
   emaildisply.textcontent = `saved Email: ${savedEmail}`;
@@ -203,12 +202,8 @@ const spasswordsignup = document.getElementById("spassword-signup");
 const formsignin = document.getElementById("form-signin");
 const emailsignin = document.getElementById("email-signin");
 const passwordsignin = document.getElementById("password-signin");
-const signuperrormessage = document.querySelector(
-  "#form-signup .error_message"
-);
-const signinerrormessage = document.querySelector(
-  "#form-signin .error_message"
-);
+const signuperrormessage = document.querySelector("#form-signup .error_message");
+const signinerrormessage = document.querySelector("#form-signin .error_message");
 
 formsignin.addEventListener("submit", (e) => {
   e.preventDefault();
